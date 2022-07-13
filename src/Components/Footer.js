@@ -1,4 +1,4 @@
-const Footer = () => {
+const Footer = () => {  
   return (
     <div className="Footer">
         <p className="text-center">
