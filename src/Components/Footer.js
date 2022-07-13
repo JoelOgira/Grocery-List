@@ -1,10 +1,11 @@
 const Footer = () => {  
+  const today = new Date();
   return (
-    <div className="Footer">
-        <p className="text-center">
-            
+    <footer className="main-footer">
+        <p className="text-center py-4" style={{color: 'green'}}>
+            Simple Grocery List &copy; {today.getFullYear()}
         </p>
-    </div>
+    </footer>
   )
 }
 
