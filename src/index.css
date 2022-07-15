@@ -16,7 +16,15 @@ a:hover {
   top: 100%;
 }
 
+.item input[type="checkbox"]:focus + label {
+  text-decoration: line-through !important;
+}
 
+.item svg:focus,
+.item svg:hover {
+  color: red !important;
+  outline: none;
+}
 
 
 
