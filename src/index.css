@@ -16,8 +16,10 @@ a:hover {
   top: 100%;
 }
 
-.item input[type="checkbox"]:focus + label {
+.item input[type="checkbox"]:checked + label {
   text-decoration: line-through !important;
+  outline: none !important;
+  opacity: 0.4;
 }
 
 .item svg:focus,
