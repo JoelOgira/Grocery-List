@@ -1,9 +1,10 @@
 import Header from './Components/Header';
+import Title from './Components/Title';
+import AddItem from './Components/AddItem';
 import Content from './Components/Content';
 import Footer from './Components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
-
 
 const App = () => {
 
@@ -39,8 +40,10 @@ const App = () => {
   }
 
   return (
-    <div className="App">
+    <div className="App container">
       <Header />
+      <Title />
+      <AddItem />
       <Content 
         items={items}
         handleCheck={handleCheck}
