@@ -3,17 +3,12 @@ a {
   color: green !important;
 }
 
-a:hover {
-  color: rgb(3, 29, 3) !important;
+.navbar a:hover {
+  border-bottom: 1px solid green !important;
 }
 
 .App {
   min-height: 100vh;  
-}
-
-.sticky-footer {
-  position: sticky;
-  top: 100%;
 }
 
 .item input[type="checkbox"]:checked + label {
@@ -26,6 +21,11 @@ a:hover {
 .item svg:hover {
   color: red !important;
   outline: none;
+}
+
+.sticky-footer {
+  position: sticky;
+  top: 100%;
 }
 
 
