@@ -31,6 +31,38 @@ a {
   outline: none;
 }
 
+/* Add Form styling */
+.addForm label {
+  position: absolute;
+  left: -9999999px;
+}
+
+.form-control {
+  border-radius: 2px !important;
+  border: 1px solid gray !important;
+}
+
+.form-control input:focus {
+  outline: none !important;
+}
+
+.addForm input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.addForm button {
+  color: green !important;
+  background-color: transparent !important;
+  border: 1px solid;
+}
+
+.addForm button:hover {
+  background-color: green !important;
+color: whitesmoke !important;
+}
+
+/* Footer Styling */
 .sticky-footer {
   position: sticky;
   top: 100%;
