@@ -1,4 +1,5 @@
 import Header from './Components/Header';
+import SearchItem from './Components/SearchItem';
 import Title from './Components/Title';
 import AddItem from './Components/AddItem';
 import Content from './Components/Content';
@@ -8,24 +9,19 @@ import { useState } from 'react';
 
 const App = () => {
 
-  const [items, setItems] = useState([
-    {
-      id: 1,
-      checked: false,
-      item: 'Cooking oil'
-    },
-    {
-      id: 2,
-      checked: false,
-      item: 'Baking flour'
-    },{
-      id: 3,
-      checked: false,
-      item: 'Bar soap'
-    }
-  ]);
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppingList')));
 
   const [newItem, setNewItem] = useState('');
+
+  const [search, setSearch] = useState('');
+
+  const addItem = item => {
+    const id = items.length ? items[items.length - 1].id + 1 : 1;
+    const myNewItem = { id, checked: false, item };
+    const listItems = [...items, myNewItem];
+    setItems(listItems);
+    localStorage.setItem('shoppingList', JSON.stringify(listItems)); 
+  }
 
   const handleCheck = id => {
     const listItems = items.map(item => 
@@ -43,26 +39,36 @@ const App = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('Submitted');
     if (!newItem) return;
     // AddItem
+    addItem(newItem);  
     setNewItem('');
   }
 
   return (
     <div className="App container">
+      
       <Header />
+      
       <Title />
+      
       <AddItem 
         newItem={newItem}
         setNewItem={setNewItem}
         handleSubmit={handleSubmit}
       />
+
+      <SearchItem 
+        search={search}
+        setSearch={setSearch}
+      />
+
       <Content 
-        items={items}
+        items={items.filter(item => ((item.item).toLowerCase().includes(search.toLowerCase())))}
         handleCheck={handleCheck}
         handleDelete={handleDelete}
       />
+      
       <Footer 
         length={items.length}
       />

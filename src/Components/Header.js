@@ -3,7 +3,7 @@ const Header = () => {
     <div className="navbar navbar-expand-sm bg-transparent py-4">
         <div className="container">
             <div className="navbar-brand">
-            <a href="/" className='py-2'>Groceries List</a>
+                <a href="/" className='py-2'>Groceries List</a>
             </div>
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item">

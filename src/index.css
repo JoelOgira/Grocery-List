@@ -59,8 +59,20 @@ a {
 
 .addForm button:hover {
   background-color: green !important;
-color: whitesmoke !important;
+  color: whitesmoke !important;
 }
+
+/* Search Form Styling */
+.searchForm label {
+  position: absolute;
+  left: -9999999px;
+}
+
+.searchForm input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
 
 /* Footer Styling */
 .sticky-footer {
