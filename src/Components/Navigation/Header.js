@@ -1,22 +1,24 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <div className="navbar navbar-expand-sm bg-transparent py-4">
         <div className="container">
             <div className="navbar-brand">
-                <a href="/" className='py-2'>Groceries List</a>
+                <Link to="/" className='py-2'>Windfall Technologies</Link>
             </div>
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
-                    <a href="/" className="nav-link">Home</a>
+                    <Link to="/" className="nav-link">Home</Link>
                 </li>
                 <li className="nav-item">
-                    <a href="/services" className="nav-link">Services</a>
+                    <Link to="/services" className="nav-link">Services</Link>
                 </li>
                 <li className="nav-item">
-                    <a href="/about" className="nav-link">About</a>
+                    <Link to="/about" className="nav-link">About</Link>
                 </li>
                 <li className="nav-item">
-                    <a href="/contact" className="nav-link">Contact</a>
+                    <Link to="/contact" className="nav-link">Contact</Link>
                 </li>
             </ul>
         </div>

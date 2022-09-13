@@ -12,7 +12,8 @@ a {
 }
 
 .navbar a:hover {
-  border-bottom: 1px solid green !important;
+  /* border-bottom: 1px solid green !important; */
+  color: whitesmoke !important;
 }
 
 .App {
@@ -78,6 +79,14 @@ a {
 .sticky-footer {
   position: sticky;
   top: 100%;
+}
+
+.sticky-footer ul {
+  list-style-type: none;
+}
+
+.sticky-footer a:hover {
+  color: whitesmoke !important;
 }
 
 
