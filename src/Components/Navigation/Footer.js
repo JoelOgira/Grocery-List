@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import { FaYoutube } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {  
   const today = new Date();
@@ -6,8 +10,9 @@ const Footer = () => {
     <footer className="sticky-footer container">      
       <hr style={{color: 'green', width: '100%', height: '1px'}} />
       <div className="row">
-        <div className="col">
+        <div className="col quick-links">
           <ul>
+            <h4 className="nav-link">Quick Links</h4>
             <li className="footer-item">
                 <Link to="/" className="nav-link">Home</Link>
             </li>
@@ -22,10 +27,11 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="col">
+        <div className="col useful-links">
           <ul>
+            <h4 className="nav-link">Useful Links</h4>
             <li className="footer-item">
-                <Link to="/" className="nav-link">Home</Link>
+                <Link to="/changebg" className="nav-link">ChangeBg</Link>
             </li>
             <li className="footer-item">
                 <Link to="/services" className="nav-link">Services</Link>
@@ -38,19 +44,20 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="col">
+        <div className="col follow-us">
           <ul>
+            <h4 className="nav-link">Follow us</h4>
             <li className="footer-item">
-                <Link to="/" className="nav-link">Home</Link>
+                <a href="https://github.com" target="_blank" className="nav-link"><FaGithub style={{fontSize: '22px'}} /></a>
             </li>
             <li className="footer-item">
-                <Link to="/services" className="nav-link">Services</Link>
+                <a href="https://linkedin.com" target="_blank" className="nav-link"> <FaLinkedin style={{fontSize: '22px'}} /> </a>
             </li>
             <li className="footer-item">
-                <Link to="/about" className="nav-link">About</Link>
+                <a href="https://twitter.com" target="_blank" className="nav-link"> <FaTwitter style={{fontSize: '22px'}} /> </a>
             </li>
             <li className="footer-item">
-                <Link to="/contact" className="nav-link">Contact</Link>
+                <a href="https://youtube.com" target="_blank" className="nav-link"> <FaYoutube style={{fontSize: '22px'}} /> </a>
             </li>
           </ul>
         </div>

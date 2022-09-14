@@ -6,6 +6,7 @@ import Home from './Components/Grocery List/Home';
 import Services from './Components/Services/Services';
 import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
+import ChangeBgCard from './Components/ChangeBg/ChangeBgCard';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/changebg" element={<ChangeBgCard />} />
         </Routes>
         <Footer />
       </div>

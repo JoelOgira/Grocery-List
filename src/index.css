@@ -1,3 +1,5 @@
+
+
 a {
   text-decoration: none !important;
   color: green !important;
@@ -13,7 +15,7 @@ a {
 
 .navbar a:hover {
   /* border-bottom: 1px solid green !important; */
-  color: whitesmoke !important;
+  color: black !important;
 }
 
 .App {
@@ -85,9 +87,22 @@ a {
   list-style-type: none;
 }
 
-.sticky-footer a:hover {
-  color: whitesmoke !important;
+.sticky-footer h4 {
+  color: green;
 }
+
+.sticky-footer h4:hover {
+  color: green;
+}
+
+.sticky-footer a {
+  margin-right: 100%;
+}
+
+.sticky-footer a:hover {
+  color: black !important;
+}
+
 
 
 
