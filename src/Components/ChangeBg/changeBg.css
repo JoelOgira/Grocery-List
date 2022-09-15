@@ -1,0 +1,14 @@
+.changeInput {
+    border: 1px solid green !important;
+    border-radius: 10px !important;
+    width: 80%;
+    margin-left: -10px !important;
+}
+
+.changeInput:focus {
+    box-shadow: none;
+}
+
+.changebtn:focus {
+    box-shadow: none;
+}

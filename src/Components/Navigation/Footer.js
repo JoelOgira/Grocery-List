@@ -62,7 +62,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p className="text-center pb-2" style={{color: 'green'}}>
+      <p className="text-center pb-4" style={{color: 'green'}}>
         Windfall Technologies &copy; {today.getFullYear()}
       </p>
     </footer>
