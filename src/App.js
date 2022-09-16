@@ -7,6 +7,7 @@ import Services from './Components/Services/Services';
 import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import ChangeBgCard from './Components/ChangeBg/ChangeBgCard';
+import Counter from './Components/Counter/Counter';
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/changebg" element={<ChangeBgCard />} />
+          <Route path="/counter" element={<Counter />} />
         </Routes>
         <Footer />
       </div>

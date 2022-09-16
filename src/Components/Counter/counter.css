@@ -1,0 +1,15 @@
+.counterbtn {
+    border: 1px solid green !important;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.counterbtn:hover {
+    color: #FFFFFF;
+    background-color: green;
+}
+
+.counterbtn:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
