@@ -21,6 +21,13 @@ const Counter = () => {
         })
     }
 
+    const countDown = () => {
+        setCounter({
+            count: counter.count,
+            subs: counter.subs - 1
+        })
+    }
+
     return (
         <div className="container counter">
             <div className="card my-4 p-4" style={{border: '1px solid green', borderRadius: '15px'}}>
@@ -34,6 +41,7 @@ const Counter = () => {
                     setCounter={setCounter}
                     handleState={handleState}
                     countUp={countUp}
+                    countDown={countDown}
                 />
             </div>
         </div>

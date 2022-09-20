@@ -12,3 +12,8 @@
 .changebtn:focus {
     box-shadow: none;
 }
+
+.changebtn:hover {
+    color: #FFFFFF;
+    background-color: green;
+}
