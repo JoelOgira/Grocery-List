@@ -23,5 +23,13 @@
 .empty-message {
     text-align: center;
     color: red;
-    margin-top: 12rem;
+    margin-top: 8rem;
+}
+
+/* Footer Styling */
+.grocery-footer {
+    position: sticky !important;
+    top: 100vh !important;
+    padding-top: 150px;
+    text-align: center;
 }
