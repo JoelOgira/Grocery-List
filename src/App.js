@@ -8,6 +8,7 @@ import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import ChangeBgCard from './Components/ChangeBg/ChangeBgCard';
 import Counter from './Components/Counter/Counter';
+import Grocery from './Components/Grocery 2.0/Grocery';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/changebg" element={<ChangeBgCard />} />
           <Route path="/counter" element={<Counter />} />
+          <Route path="/grocery" element={<Grocery />} />
         </Routes>
         <Footer />
       </div>
