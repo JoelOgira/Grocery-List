@@ -18,7 +18,7 @@ const AddItem = ({newItem, setNewItem, handleSubmit}) => {
                 placeholder="Add Item" 
                 required
                 value={newItem}
-                onChange={(e) => setNewItem(e.target.value.trim())}
+                onChange={(e) => setNewItem(e.target.value)}
             />
             <button className="btn bg-green" onClick={() => inputRef.current.focus()} type="submit" aria-label="Add Item">
                 <FaPlus />

@@ -1,0 +1,27 @@
+.list-group-item input:focus {
+    box-shadow: none;
+}
+
+.list-group-item input[type="checkbox"]:checked + label {
+    text-decoration: line-through !important;
+    outline: none !important;
+    opacity: 0.4;
+  }
+
+.trash-icon {
+    cursor: pointer;
+}
+
+.trash-icon:hover {
+    color: red;
+}
+
+.trash-icon:focus {
+    outline: none;
+}
+
+.empty-message {
+    text-align: center;
+    color: red;
+    margin-top: 12rem;
+}
