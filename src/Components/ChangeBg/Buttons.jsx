@@ -1,12 +1,20 @@
-const Buttons = ({ colorValue, setcolorValue, isDarkText, setisDarkText }) => {
+import colorNames from "colornames";
+
+const Buttons = ({ colorValue, setcolorValue, isDarkText, setisDarkText, setHexValue }) => {
   return (
     <div className="container">
         <div className="row">
             <div className="col change">
-              <input class="form-control changeInput my-4" type="text" placeholder="Change Color" aria-label="change background color" 
+              <input class="form-control changeInput my-4" 
+              type="text" placeholder="Change Color" 
+              aria-label="change background color" 
               value={colorValue}
-              onChange={e => (setcolorValue(e.target.value))}
               autoFocus
+              onChange={e => {
+                (setcolorValue(e.target.value));
+                (setHexValue(colorNames(e.target.value)));            
+              }}
+              
               />
             </div>
             <div className="col">
