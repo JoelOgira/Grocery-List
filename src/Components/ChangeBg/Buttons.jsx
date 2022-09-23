@@ -6,6 +6,7 @@ const Buttons = ({ colorValue, setcolorValue, isDarkText, setisDarkText }) => {
               <input class="form-control changeInput my-4" type="text" placeholder="Change Color" aria-label="change background color" 
               value={colorValue}
               onChange={e => (setcolorValue(e.target.value))}
+              autoFocus
               />
             </div>
             <div className="col">

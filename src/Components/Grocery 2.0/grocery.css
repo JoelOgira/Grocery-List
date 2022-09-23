@@ -7,6 +7,10 @@
     border-radius: 7.5px !important;
 }
 
+.addBtn:focus {
+    box-shadow: none;
+}
+
 /* Content List styling */
 .list-group-item input:focus {
     box-shadow: none;
