@@ -3,28 +3,13 @@ import { useState } from "react";
 import GroceryFooter from './GroceryFooter';
 import Content from './Content';
 import AddItem from './AddItem';
+import SearchItem from './SearchItem';
 
 const Grocery = () => {
 
-  const [items, setItems] = useState([
-    {
-      id: 1,
-      checked: false,
-      item: "Avocado"
-    },
-    {
-      id: 2,
-      checked: false,
-      item: "Kitunguu Saumu"
-    },
-    {
-      id: 3,
-      checked: false,
-      item: "Waru gunia moja"
-    }
-  ]);
-
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('New Shopping List')));
   const [newItem, setnewItem] = useState('');
+  const [search, setSearch] = useState('');
 
   const setAndSaveItems = (newItem) => {
     setItems(newItem);
@@ -56,9 +41,18 @@ const Grocery = () => {
     setnewItem('');
   }
 
+  const handleSearch = () => {
+
+  }
+
   return (
     <div className="Grocery container">
         <main>
+
+          <SearchItem 
+            search={search}
+            setSearch={setSearch}
+          />
 
           <AddItem 
             newItem={newItem}
@@ -67,14 +61,15 @@ const Grocery = () => {
           />
 
           <Content 
-            items={items}
+            items={items.filter(item => ((item.item).toLowerCase()).includes(search.toLocaleLowerCase()))}
             handleCheck={handleCheck}
             handleDelete={handleDelete}
           />
-          <GroceryFooter 
-            length={items.length}
-          />
+          
         </main>
+        <GroceryFooter 
+            length={items.length}
+        />
     </div>
   )
 }

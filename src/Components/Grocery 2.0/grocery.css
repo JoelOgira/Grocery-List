@@ -1,6 +1,5 @@
 /* Add Form Styling */
 .addItem {
-    border-radius: 10px !important;
     margin-right: 15px !important;
 }
 
@@ -8,6 +7,7 @@
     border-radius: 7.5px !important;
 }
 
+/* Content List styling */
 .list-group-item input:focus {
     box-shadow: none;
 }
@@ -16,7 +16,11 @@
     text-decoration: line-through !important;
     outline: none !important;
     opacity: 0.4;
-  }
+}
+
+.form-check-input[type=checkbox]:checked {
+    background-color: green !important;
+}
 
 .trash-icon {
     cursor: pointer;
@@ -36,10 +40,13 @@
     margin-top: 8rem;
 }
 
+.list-group-item, .addItem, .searchItem {
+    border-radius: 10px !important;
+}
+
 /* Footer Styling */
 .grocery-footer {
-    position: sticky !important;
-    top: 100vh !important;
+    padding-top: 50px ;
     text-align: center;
 }
 
