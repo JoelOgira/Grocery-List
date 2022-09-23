@@ -1,3 +1,13 @@
+/* Add Form Styling */
+.addItem {
+    border-radius: 10px !important;
+    margin-right: 15px !important;
+}
+
+.addBtn {
+    border-radius: 7.5px !important;
+}
+
 .list-group-item input:focus {
     box-shadow: none;
 }
@@ -30,6 +40,6 @@
 .grocery-footer {
     position: sticky !important;
     top: 100vh !important;
-    padding-top: 150px;
     text-align: center;
 }
+
