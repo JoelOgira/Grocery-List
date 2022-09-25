@@ -12,7 +12,7 @@ const AddItem = ({ newItem, setnewItem, handleSubmit }) => {
         required
         value={newItem}
         ref={inputRef}
-        onChange={ e => setnewItem(e.target.value)}
+        onChange={ e => setnewItem(e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1))}
         type="text" 
         className="addItem form-control" 
         placeholder="Add Item" 
