@@ -11,7 +11,7 @@ const Home = () => {
     const [items, setItems] = useState([]);
     const [newItem, setNewItem] = useState('');
     const [search, setSearch] = useState('');
-    const [fetchError, setfetchError] = useState(null);
+    const [fetchError, setfetchError] = useState(null); 
 
     const API_URL = 'http://localhost:8000/items';
 
