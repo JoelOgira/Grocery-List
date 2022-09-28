@@ -11,6 +11,7 @@ const Grocery = () => {
   const [items, setItems] = useState([]);
   const [newItem, setnewItem] = useState('');
   const [search, setSearch] = useState('');
+  const [isLoading, setisLoading] = useState(true);
   const [fetchError, setfetchError] = useState(null);
 
   useEffect(() => {
@@ -24,10 +25,16 @@ const Grocery = () => {
         setfetchError(null);
       } catch (err) {
         setfetchError(err.message)
+      } finally {
+        setisLoading(false);
       }
     }
 
-    (async () => await fetchItems())();
+    setTimeout(() => {
+      (async () => await fetchItems())();
+    }, 3000);
+
+    
   }, [])
 
   const addItem = (item) => {
@@ -70,17 +77,19 @@ const Grocery = () => {
           />
 
         <main>
-          { fetchError && <p className="text-center" style={{color: 'red'}}>{`Error: ${fetchError}`}</p>}
+          {isLoading && <p className='text-center my-4' style={{color: 'green'}}>Your List is Loading ...</p>}
+
+          { fetchError && <p className="text-center my-4" style={{color: 'red'}}>{`Error: ${fetchError}`}</p>}
       
             
-          { !fetchError && <Content
+          { !fetchError && !isLoading && <Content
               items={items.filter(item => ((item.item).toLowerCase().includes(search.toLowerCase())))}
               handleCheck={handleCheck}
               handleDelete={handleDelete}
             />
           }
             
-          { !fetchError && <GroceryFooter 
+          { !fetchError && !isLoading && <GroceryFooter 
               length={items.length}
             />
           }
