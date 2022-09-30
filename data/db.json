@@ -1,19 +1,19 @@
 {
-    "items": [
-        {
-            "id": 1,
-            "checked": false,
-            "item": "Sukari"
-        },
-        {
-            "id": 2,
-            "checked": false,
-            "item": "Malenge"
-        },
-        {
-            "id": 3,
-            "checked": false,
-            "item": "Mboga"
-        }
-    ]
+  "items": [
+    {
+      "id": 1,
+      "checked": false,
+      "item": "Sukari"
+    },
+    {
+      "id": 2,
+      "checked": false,
+      "item": "Malenge"
+    },
+    {
+      "id": 3,
+      "checked": false,
+      "item": "Mboga"
+    }
+  ]
 }

@@ -4,6 +4,7 @@ import GroceryFooter from './GroceryFooter';
 import Content from './Content';
 import AddItem from './AddItem';
 import SearchItem from './SearchItem';
+import apiRequest from './apiRequest';
 
 const Grocery = () => {
   const API_URL =  `http://localhost:8000/items`;
@@ -37,11 +38,23 @@ const Grocery = () => {
     
   }, [])
 
-  const addItem = (item) => {
+  const addItem = async (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
     const myNewItem = { id, checked: false, item }
     const listItems = [...items, myNewItem]
     setItems(listItems);
+
+    const addOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(myNewItem)
+    }
+
+    const result = await apiRequest(API_URL, addOptions);
+    if (result) {setfetchError(result)}
+
   }
 
   const handleCheck = id => {
