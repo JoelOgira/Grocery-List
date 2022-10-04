@@ -1,55 +1,43 @@
-import { useState, useEffect } from "react"
-
+import { useEffect, useState } from "react";
+import Form from "./Form";
+import List from "./List";
 
 const Challenge = () => {
 
-    const [users, setUsers] = useState([]);
-    const [isLoading, setisLoading] = useState(true);
-    const [fetchError, setfetchError] = useState(null);
-    const apiKey = `https://jsonplaceholder.typicode.com/users`;
+  const API_URL = 'https://jsonplaceholder.typicode.com/';
+  const [reqType, setReqType] = useState('users');
+  const [items, setItems] = useState([]);
+  const [fetchError, setFetchError] = useState(null)
+  const [loading, setLoading] = useState(true)
 
-    useEffect(() => {
-
-        const loadData = async () => {
-            try {
-                const response = await fetch(apiKey);
-                if (!response.ok) throw Error('Could not fetch data');
-                const data = await response.json();
-                setUsers(data);
-                setfetchError(null)
-            } catch (error) {
-                setfetchError(error.message);
-            } finally {
-                setisLoading(false);
-            }
-        }
-        // getData();
-        (async () => await loadData())();
-    }, []);
-
-    // const getData = () => {
-    //     fetch('https://jsonplaceholder.typicode.com/users')
-    //     .then(response => response.json())
-    //     .then(receivedData => setUsers(receivedData));
-    // }
-
+  useEffect(() => {  
     
-    return (
-    <div className="container">
-        {isLoading && <p className="text-center text-success my-4 py-4">Loading Data ... </p>}
-        {fetchError && <p className="text-center text-success my-4 py-4">{`Error! ${fetchError}`}</p>}
-        {/* {!isLoading && !fetchError && <ul>
-            {users.map(user => (
-                <li key={user.id}>{user.username}, {user.email}</li>
-            ))}
-        </ul>} */}
-        {!isLoading && !fetchError && <ul>
-            {users.map(user => (
-                <li key={user.id}>{JSON.stringify(user)}</li>
-            ))}
-        </ul>}
+    const fetchItems = async () => {
+      try {
+        const response = await fetch(`${API_URL}${reqType}`);
+        if (!response.ok) throw Error('Ooops! Could not fetch items from database');
+        const data = await response.json();
+        setItems(data);
+        setFetchError(null);
+      } catch (error) {
+        setFetchError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchItems();
+  }, [reqType])
+
+  return (
+    <div className="container" style={{boder: 'none'}}>
+      <Form reqType={reqType} setReqType={setReqType} />
+      <main>
+        {loading && <p className="text-center" style={{color: 'green', marginTop: '75px'}}>Items are being fetched ... </p>}
+        {fetchError && <p className="text-center" style={{color: 'red', marginTop: '75px'}}>{fetchError}</p>}
+        {!loading && !fetchError && <List items={items} />}
+      </main>
     </div>
-    )
+  )
 }
 
-export default Challenge
+export default Challenge;

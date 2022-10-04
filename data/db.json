@@ -18,7 +18,12 @@
     {
       "id": 4,
       "checked": false,
-      "item": "Chai"
+      "item": "Kaimati"
+    },
+    {
+      "id": 5,
+      "checked": false,
+      "item": "Kigogo"
     }
   ]
 }

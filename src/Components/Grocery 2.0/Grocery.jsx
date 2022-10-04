@@ -33,7 +33,7 @@ const Grocery = () => {
 
     setTimeout(() => {
       (async () => await fetchItems())();
-    }, 3000);
+    }, 2000);
 
     
   }, [])
