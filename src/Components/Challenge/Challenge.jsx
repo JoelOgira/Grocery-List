@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Form from "./Form";
 import List from "./List";
+import Table from "./Table";
 
 const Challenge = () => {
 
@@ -34,7 +35,8 @@ const Challenge = () => {
       <main>
         {loading && <p className="text-center" style={{color: 'green', marginTop: '75px'}}>Items are being fetched ... </p>}
         {fetchError && <p className="text-center" style={{color: 'red', marginTop: '75px'}}>{fetchError}</p>}
-        {!loading && !fetchError && <List items={items} />}
+        {/* {!loading && !fetchError && <List items={items} />} */}
+        {!loading && !fetchError && <Table items={items} />}
       </main>
     </div>
   )

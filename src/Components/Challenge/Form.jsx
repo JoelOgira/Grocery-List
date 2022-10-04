@@ -2,7 +2,7 @@ import Button from "./Button";
 
 const Form = ({reqType, setReqType}) => {
   return (
-    <form className="container" onSubmit={e => e.preventDefault()}>
+    <form className="mb-3" onSubmit={e => e.preventDefault()}>
         <Button
             buttonText="users"
             reqType={reqType}

@@ -1,7 +1,7 @@
 
 const ListItem = ({ item }) => {
   return (
-    <li>
+    <li className="challenge-li">
         {JSON.stringify(item)}
     </li>
   )
