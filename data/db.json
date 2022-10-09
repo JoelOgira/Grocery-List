@@ -24,6 +24,26 @@
       "id": 5,
       "checked": false,
       "item": "Kigogo"
+    },
+    {
+      "id": 6,
+      "checked": false,
+      "item": "Cabbege"
+    },
+    {
+      "id": 7,
+      "checked": false,
+      "item": "Managu "
+    },
+    {
+      "id": 8,
+      "checked": false,
+      "item": "Sukumawiki"
+    },
+    {
+      "id": 9,
+      "checked": false,
+      "item": "Wali wa kupaka"
     }
   ]
 }
