@@ -1,0 +1,14 @@
+{
+  "todos": [
+    {
+      "id": 2,
+      "checked": false,
+      "todo": "Node.Js"
+    },
+    {
+      "id": 3,
+      "checked": false,
+      "todo": "Next.js"
+    }
+  ]
+}

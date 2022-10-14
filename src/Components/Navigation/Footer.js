@@ -34,8 +34,11 @@ const Footer = () => {
                 <Link to="/changebg" className="nav-link">ChangeBg</Link>
             </li>
             <li className="footer-item">
-                <Link to="/counter" className="nav-link">Counter</Link>
+                <Link to="/todo" className="nav-link">Todo</Link>
             </li>
+            {/* <li className="footer-item">
+                <Link to="/counter" className="nav-link">Counter</Link>
+            </li> */}
             <li className="footer-item">
                 <Link to="/grocery" className="nav-link">Grocery</Link>
             </li>

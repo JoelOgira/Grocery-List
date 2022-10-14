@@ -10,6 +10,7 @@ import ChangeBgCard from './Components/ChangeBg/ChangeBgCard';
 import Counter from './Components/Counter/Counter';
 import Grocery from './Components/Grocery 2.0/Grocery';
 import Challenge from './Components/Challenge/Challenge';
+import Todo from './Components/Grocery 3.0/Todo';
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/changebg" element={<ChangeBgCard />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/challenge" element={<Challenge />} />
+          <Route path="/todo" element={<Todo />} />
           <Route path="/grocery" element={<Grocery />} />
         </Routes>
         <Footer />
