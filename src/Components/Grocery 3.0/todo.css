@@ -1,5 +1,26 @@
+.Todo {
+    display: flex;
+    background: radial-gradient( green, black);
+    flex-direction: column;
+    flex-grow: 1;
+    width: 75%;
+    margin: 0 auto;
+    border: 4px solid black;
+    border-radius: 15px;
+}
+
+.add-todo-form label {
+    color: white;
+    text-align: center !important;
+}
+
+.add-todo-form input {
+    border: none;
+    border-radius: 0;
+}
+
 /* Search Form Styling */
-.todo-label {
+.todo-label, .add-todo-label {
     position: absolute;
-    right: -999999px !important;
+    left: -999999px ;
 }

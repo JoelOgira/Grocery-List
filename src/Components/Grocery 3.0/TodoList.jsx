@@ -6,7 +6,7 @@ const TodoList = ({todos, handleDelete}) => {
         { todos.length ? (
             <SingleTodo todos={todos} handleDelete={handleDelete}/>
         ) : (
-            <p className="text-center my-4">
+            <p className="text-center my-4" style={{color: 'red'}}>
                 The Todo List is Empty
             </p>
         )}

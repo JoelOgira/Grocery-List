@@ -2,7 +2,7 @@
 
 const SearchTodo = ({ search, setSearch }) => {
   return (
-    <form className="todo-search-form" onSubmit={e => e.preventDefault()}>
+    <form className="todo-search-form mb-3" onSubmit={e => e.preventDefault()}>
         <label htmlFor="Search Todos" className="todo-label">Search Todos</label>
         <input 
             type="text" 

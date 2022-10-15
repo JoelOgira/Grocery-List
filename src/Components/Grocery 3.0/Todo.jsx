@@ -55,7 +55,7 @@ const Todo = () => {
     }
 
     return (
-    <div className="Todo container">
+    <div className="Todo py-4">
         <Header />
         <SearchTodo search={search} setSearch={setSearch} />
         <main>
