@@ -29,6 +29,16 @@
       "id": 6,
       "checked": false,
       "todo": "Postgre DB"
+    },
+    {
+      "id": 7,
+      "checked": false,
+      "todo": "Cloud Computing"
+    },
+    {
+      "id": 8,
+      "checked": false,
+      "todo": "DevOps"
     }
   ]
 }

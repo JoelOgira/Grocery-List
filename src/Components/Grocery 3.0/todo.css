@@ -19,6 +19,14 @@
     border-radius: 0;
 }
 
+.add-todo-form input:focus, .todo-search-form input:focus {
+    box-shadow: none;
+}
+
+.delete-todo:hover {
+    color: red;
+}
+
 /* Search Form Styling */
 .todo-label, .add-todo-label {
     position: absolute;
