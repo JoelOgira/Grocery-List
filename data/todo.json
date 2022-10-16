@@ -31,14 +31,19 @@
       "todo": "Postgre DB"
     },
     {
-      "id": 7,
-      "checked": false,
-      "todo": "Cloud Computing"
-    },
-    {
       "id": 8,
       "checked": false,
       "todo": "DevOps"
+    },
+    {
+      "id": 9,
+      "checked": false,
+      "todo": "Kubernetes"
+    },
+    {
+      "id": 10,
+      "checked": false,
+      "todo": "Linux"
     }
   ]
 }

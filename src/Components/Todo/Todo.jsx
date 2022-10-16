@@ -12,6 +12,8 @@ const Todo = () => {
     const [search, setSearch] = useState('');
     const [searchResults, setSearchResults] = useState('');
     const [newTodo, setNewTodo] = useState('');
+    const [loading, setLoading] = useState(true);
+    const [fetchError, setFetchError] = useState('');
 
     useEffect(() => {
         const filteredTodos = todos.filter(todo => ((todo.todo).toLowerCase().includes(search.toLowerCase())));
@@ -23,12 +25,16 @@ const Todo = () => {
             try {
                 const response = await api.get('/todos');
                 setTodos(response.data);
-                
+                setFetchError(null);
             } catch (error) {
-                console.log(error.message);
+                setFetchError(error.message);
+            } finally {
+                setLoading(false);
             }
         }
-        fetchTodos();
+        setTimeout(() => {
+            fetchTodos();
+        }, 2000)
     }, []);
 
     const handleSubmit = async e => {
@@ -37,8 +43,7 @@ const Todo = () => {
         const myNewTodo = {id, checked: false, todo: newTodo};
         try {
             const response = await api.post('/todos', myNewTodo);
-            const allTodos = [...todos, response.data];
-            setTodos(allTodos);
+            setTodos([...todos, response.data]);
             setNewTodo('');
         } catch (error) {
             console.log(error.message);
@@ -59,7 +64,9 @@ const Todo = () => {
         <Header />
         <SearchTodo search={search} setSearch={setSearch} />
         <main>
-            <TodoList todos={searchResults} handleDelete={handleDelete} />
+            {loading && <p className='text-center my-4' style={{color: 'green'}}>Todo Application is loading ... </p>}
+            {fetchError && <p className="text-center my-4">{`Error: ${fetchError}`}</p> }
+            {!loading && !fetchError && <TodoList todos={searchResults} handleDelete={handleDelete} />}
         </main>
         <AddTodo handleSubmit={handleSubmit} newTodo={newTodo} setNewTodo={setNewTodo} />
     </div>
