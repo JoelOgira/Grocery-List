@@ -14,4 +14,4 @@ const TodoList = ({todos, handleDelete}) => {
   )
 }
 
-export default TodoList
+export default TodoList;
