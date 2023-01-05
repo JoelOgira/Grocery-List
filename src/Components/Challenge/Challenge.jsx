@@ -21,7 +21,7 @@ const Challenge = () => {
         setItems(data);
         setFetchError(null);
       } catch (error) {
-        setFetchError(error.message);
+        setFetchError(error.message); 
       } finally {
         setLoading(false);
       }
@@ -30,7 +30,7 @@ const Challenge = () => {
   }, [reqType])
 
   return (
-    <div className="container" style={{boder: 'none'}}>
+    <div className="container" style={{border: 'none'}}>
       <Form reqType={reqType} setReqType={setReqType} />
       <main>
         {loading && <p className="text-center" style={{color: 'green', marginTop: '75px'}}>Items are being fetched ... </p>}
